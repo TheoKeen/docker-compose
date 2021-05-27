@@ -2,7 +2,8 @@ version: "3.0"
 services:
   qemu-ga:
     image: theokeen/qemu-ga
-    privileged: true
-    volumes:
+    restart: always
+    privileged: false
+    devices:
     - /dev/vport3p1:/dev/vport1p1
     network_mode: "host"
